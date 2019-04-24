@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_change_text_size"
+        android:title="@string/text_size" />
+
+    <item
+       android:id="@+id/action_change_text_color"
+       android:title="@string/font_color" />
+    <item
+       android:id="@+id/action_change_bg_color"
+       android:title="@string/bg_color" />
+
+    <item
+       android:id="@+id/action_bold"
+       android:title="@string/bold" />
+
+    <item
+      android:id="@+id/action_italic"
+      android:title="@string/italic" />
+
+</menu>

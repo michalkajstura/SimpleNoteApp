@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SwimLabMenus</string>
+    <string name="title">Title</string>
+    <string name="write_smth">Write something...</string>
+    <string name="text_size">Change font size</string>
+    <string name="bold">Bold</string>
+    <string name="italic">Italic</string>
+    <string name="font_color">Change font color</string>
+    <string name="bg_color">Change background color</string>
+</resources>
