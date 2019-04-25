@@ -13,10 +13,14 @@
 
     <item
        android:id="@+id/action_bold"
-       android:title="@string/bold" />
+       android:title="@string/bold"
+       android:checkable="true"
+       android:checked="false"/>
 
     <item
       android:id="@+id/action_italic"
-      android:title="@string/italic" />
+      android:title="@string/italic"
+      android:checkable="true"
+      android:checked="false"/>
 
 </menu>

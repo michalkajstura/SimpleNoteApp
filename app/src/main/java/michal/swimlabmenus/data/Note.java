@@ -1,18 +1,42 @@
-package michal.swimlabmenus;
+package michal.swimlabmenus.data;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
 import android.graphics.Color;
 
+@Entity
 public class Note {
-    private final String text;
-    private final int textSize;
-    private final boolean bold;
-    private final boolean italic;
-    private final int textColor;
-    private final int titleColor;
-    private final int backgroundColor;
+
+    public Note() {}
+
+    @PrimaryKey(autoGenerate = true)
+    public int noteId;
+
+    public String text;
+
+    public String title;
+
+    @ColumnInfo(name = "text_size")
+    public int textSize;
+
+    public boolean bold;
+
+    public boolean italic;
+
+    @ColumnInfo(name = "text_color")
+    public int textColor;
+
+    @ColumnInfo(name = "title_color")
+    public int titleColor;
+
+    @ColumnInfo(name = "background_color")
+    public int backgroundColor;
 
     public static class Builder {
+
         private String text = "";
+        private String title = "";
         private int textSize = 12;
         private boolean bold = false;
         private boolean italic = false;
@@ -45,6 +69,10 @@ public class Note {
             this.titleColor = titleColor; return this;
         }
 
+        public Builder title(String title) {
+            this.title = title; return this;
+        }
+
         public Note build() {
             return new Note(this);
         }
@@ -58,6 +86,7 @@ public class Note {
         this.textColor = builder.textColor;
         this.backgroundColor = builder.backgroundColor;
         this.titleColor = builder.titleColor;
+        this.title = builder.title;
     }
 
 }
