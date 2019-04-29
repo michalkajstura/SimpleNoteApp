@@ -6,6 +6,7 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 
 import java.util.List;
+import java.util.Optional;
 
 @Dao
 public interface NoteRepository {
@@ -18,4 +19,10 @@ public interface NoteRepository {
 
     @Query(("DELETE FROM note"))
     void deleteAll();
+
+    @Query("SELECT * FROM note WHERE noteId = :id")
+    Optional<Note> getNoteById(int id);
+
+    @Query("DELETE FROM note WHERE noteId = :id")
+    void deleteNote(int id);
 }

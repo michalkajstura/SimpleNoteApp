@@ -1,26 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:title="Save"
+        android:id="@+id/action_save"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/save"/>
     <item
         android:id="@+id/action_change_text_size"
-        android:title="@string/text_size" />
-
+        android:title="@string/text_size"/>
+        <!--app:showAsAction="ifRoom"/>-->
     <item
        android:id="@+id/action_change_text_color"
        android:title="@string/font_color" />
-    <item
-       android:id="@+id/action_change_bg_color"
-       android:title="@string/bg_color" />
 
     <item
        android:id="@+id/action_bold"
        android:title="@string/bold"
+       android:icon="@drawable/bold"
        android:checkable="true"
        android:checked="false"/>
 
     <item
       android:id="@+id/action_italic"
       android:title="@string/italic"
+      android:icon="@drawable/italic"
       android:checkable="true"
       android:checked="false"/>
+
+    <item android:id="@+id/submenu"
+        android:title="Fonts"
+        app:showAsAction="never">
+        <menu>
+            <item android:id="@+id/calibri"
+                android:title="Calibri" />
+            <item android:id="@+id/comic_sans"
+                android:title="Comic Sans"/>
+        </menu>
+    </item>
 
 </menu>

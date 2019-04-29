@@ -5,7 +5,7 @@ import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-@Database(entities = {Note.class}, version = 2, exportSchema = false)
+@Database(entities = {Note.class}, version = 4, exportSchema = false)
 public abstract class NotesDatabase extends RoomDatabase {
 
     public abstract NoteRepository noteRepo();
