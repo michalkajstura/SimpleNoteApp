@@ -57,15 +57,15 @@ public class GalleryActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.gallery_menu, menu);
-
-        return super.onCreateOptionsMenu(menu);
+        MenuItem delete = menu.add(Menu.NONE, 0, Menu.NONE, "Delete all");
+        delete.setIcon(R.drawable.delete);
+        return true;
+//        return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.action_delete_all) {
+        if (item.getTitle().equals("Delete all")) {
             database.noteRepo()
                     .deleteAll();
         }

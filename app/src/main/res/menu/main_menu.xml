@@ -7,10 +7,6 @@
         app:showAsAction="ifRoom"
         android:icon="@drawable/save"/>
     <item
-        android:id="@+id/action_change_text_size"
-        android:title="@string/text_size"/>
-        <!--app:showAsAction="ifRoom"/>-->
-    <item
        android:id="@+id/action_change_text_color"
        android:title="@string/font_color" />
 
